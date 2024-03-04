@@ -1,5 +1,5 @@
-import { getTitle } from "/src/js/components/main-title.js";
-import { getDesc } from "/src/js/components/main-desc.js";
+import { getTitle } from "/src/js/components/mainTitle/main-title.js";
+import { getDesc } from "/src/js/components/mainDesc/main-desc.js";
 //Сторінка Каталога
 export function getCatalog() {
   const catalogContainer = document.createElement("div");

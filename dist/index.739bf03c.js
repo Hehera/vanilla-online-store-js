@@ -589,8 +589,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "router", ()=>router);
 var _navigo = require("navigo");
 var _navigoDefault = parcelHelpers.interopDefault(_navigo);
-var _headerJs = require("/src/js/components/header.js");
-var _mainJs = require("/src/js/components/main.js");
+var _headerJs = require("/src/js/components/header/header.js");
+var _mainJs = require("/src/js/components/main/main.js");
 const router = new (0, _navigoDefault.default)("/");
 // import { getProduct } from "./pages/product.js";
 const app = document.getElementById("app");
@@ -643,7 +643,7 @@ app.append(main);
 // app.append(product)
 router.resolve();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","navigo":"fuSlc","/src/js/components/header.js":"iODzc","/src/js/components/main.js":"6zk94","b6271642c7f5e36":"c48Hx","4f5087fc1c250b41":"6hLcw","8dff49ecdecdca4b":"7VF80","6d799db7b5011a41":"jAK9K","9d59a38700be7d49":"csMpT","a1a90b0c98d92140":"iTTHp"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","navigo":"fuSlc","b6271642c7f5e36":"bcaiU","4f5087fc1c250b41":"czGM9","8dff49ecdecdca4b":"iBWCE","6d799db7b5011a41":"a3B1G","9d59a38700be7d49":"f1hnr","a1a90b0c98d92140":"5QcGJ","/src/js/components/header/header.js":"k3piG","/src/js/components/main/main.js":"eUJyY"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -1192,103 +1192,48 @@ exports.export = function(dest, destName, get) {
     }().default;
 });
 
-},{}],"iODzc":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-// Шапка
-parcelHelpers.export(exports, "getHeader", ()=>getHeader);
-var _indexJs = require("/src/js/index.js");
-function getHeader() {
-    const header = document.createElement("header");
-    header.classList.add("header");
-    const containerHeader = document.createElement("div");
-    containerHeader.classList.add("container");
-    const navHeader = document.createElement("nav");
-    navHeader.classList.add("header__nav");
-    const link1 = document.createElement("a");
-    link1.href = "/";
-    link1.classList.add("btn");
-    link1.textContent = "\u0413\u043E\u043B\u043E\u0432\u043D\u0430 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0430";
-    link1.addEventListener("click", function(event) {
-        event.preventDefault();
-        (0, _indexJs.router).navigate("/");
-    });
-    const link2 = document.createElement("a");
-    link2.href = "/catalog";
-    link2.classList.add("btn");
-    link2.textContent = "\u041A\u0430\u0442\u0430\u043B\u043E\u0433";
-    link2.addEventListener("click", function(event) {
-        event.preventDefault();
-        (0, _indexJs.router).navigate("/catalog");
-    });
-    const link3 = document.createElement("a");
-    link3.href = "/basket";
-    link3.classList.add("btn");
-    link3.textContent = "\u041A\u043E\u0440\u0437\u0438\u043D\u0430";
-    link3.addEventListener("click", function(event) {
-        event.preventDefault();
-        (0, _indexJs.router).navigate("/basket");
-    });
-    header.append(containerHeader);
-    containerHeader.append(navHeader);
-    navHeader.append(link1, link2, link3);
-    return header;
-}
+},{}],"bcaiU":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("ca0b2f4c13a6dd20")(require("64e72822fcb2b084").getBundleURL("g05j8") + "main-content.02eff12f.css" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("eb36c90ee177592c")(require("64e72822fcb2b084").getBundleURL("g05j8") + "main-content.f327517b.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("4NdVc"));
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/index.js":"ebWYT"}],"6zk94":[function(require,module,exports) {
-// Main тег
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getMain", ()=>getMain);
-function getMain() {
-    const main = document.createElement("main");
-    main.classList.add("main");
-    return main;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c48Hx":[function(require,module,exports) {
-module.exports = require("2a3759b06f6b6913")(require("5146445df3297951").getBundleURL("g05j8") + "main-content.f327517b.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("4NdVc"));
-
-},{"2a3759b06f6b6913":"61B45","5146445df3297951":"lgJ39"}],"61B45":[function(require,module,exports) {
+},{"ca0b2f4c13a6dd20":"1MWPE","64e72822fcb2b084":"lgJ39","eb36c90ee177592c":"61B45"}],"1MWPE":[function(require,module,exports) {
 "use strict";
-var cacheLoader = require("ca2a84f7fa4a3bb0");
+var cacheLoader = require("ae7c5e215a4907e2");
 module.exports = cacheLoader(function(bundle) {
     return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName("script");
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
+        // Don't insert the same link element twice (e.g. if it was already in the HTML)
+        var existingLinks = document.getElementsByTagName("link");
+        if ([].concat(existingLinks).some(function isCurrentBundle(link) {
+            return link.href === bundle && link.rel.indexOf("stylesheet") > -1;
         })) {
             resolve();
             return;
         }
-        var preloadLink = document.createElement("link");
-        preloadLink.href = bundle;
-        preloadLink.rel = "preload";
-        preloadLink.as = "script";
-        document.head.appendChild(preloadLink);
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = bundle;
-        script.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script.onerror = script.onload = null;
-            script.remove();
-            reject(error);
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = bundle;
+        link.onerror = function(e) {
+            link.onerror = link.onload = null;
+            link.remove();
+            reject(e);
         };
-        script.onload = function() {
-            script.onerror = script.onload = null;
+        link.onload = function() {
+            link.onerror = link.onload = null;
             resolve();
         };
-        document.getElementsByTagName("head")[0].appendChild(script);
+        document.getElementsByTagName("head")[0].appendChild(link);
     });
 });
 
-},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
+},{"ae7c5e215a4907e2":"j49pS"}],"j49pS":[function(require,module,exports) {
 "use strict";
 var cachedBundles = {};
 var cachedPreloads = {};
@@ -1349,36 +1294,158 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"6hLcw":[function(require,module,exports) {
-module.exports = require("41b33a30116004fc")(require("8cc0f2f726d31a53").getBundleURL("g05j8") + "catalog.bae1f746.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("enWwp"));
+},{}],"61B45":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require("ca2a84f7fa4a3bb0");
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName("script");
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
+        }
+        var preloadLink = document.createElement("link");
+        preloadLink.href = bundle;
+        preloadLink.rel = "preload";
+        preloadLink.as = "script";
+        document.head.appendChild(preloadLink);
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = bundle;
+        script.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script.onerror = script.onload = null;
+            script.remove();
+            reject(error);
+        };
+        script.onload = function() {
+            script.onerror = script.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+});
 
-},{"41b33a30116004fc":"61B45","8cc0f2f726d31a53":"lgJ39"}],"7VF80":[function(require,module,exports) {
-module.exports = require("12f9805fe10f14b4")(require("53261e0cf8367f75").getBundleURL("g05j8") + "basket.690031ab.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("ai5BV"));
+},{"ca2a84f7fa4a3bb0":"j49pS"}],"czGM9":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("16f4119e72d64f84")(require("ce7bb8e2fa369953").getBundleURL("g05j8") + "catalog.f682593a.css" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("b7f790394ea78322")(require("ce7bb8e2fa369953").getBundleURL("g05j8") + "catalog.bae1f746.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("enWwp"));
 
-},{"12f9805fe10f14b4":"61B45","53261e0cf8367f75":"lgJ39"}],"jAK9K":[function(require,module,exports) {
-module.exports = require("7ba27883892b876f")(require("a558a9d7d8d75213").getBundleURL("g05j8") + "product.32ff8da9.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("ajSHU"));
+},{"16f4119e72d64f84":"1MWPE","ce7bb8e2fa369953":"lgJ39","b7f790394ea78322":"61B45"}],"iBWCE":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("6c350c082d5865c0")(require("b58695408f15c1c8").getBundleURL("g05j8") + "basket.45fcb16d.css" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("1c5ea58561950ba9")(require("b58695408f15c1c8").getBundleURL("g05j8") + "basket.690031ab.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("ai5BV"));
 
-},{"7ba27883892b876f":"61B45","a558a9d7d8d75213":"lgJ39"}],"csMpT":[function(require,module,exports) {
-module.exports = require("7f250e71109ecf03")(require("4fdcfa8274853961").getBundleURL("g05j8") + "order.16121d68.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("gi2Xn"));
+},{"6c350c082d5865c0":"1MWPE","b58695408f15c1c8":"lgJ39","1c5ea58561950ba9":"61B45"}],"a3B1G":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("8bd92b5359956747")(require("26360e45f84f3e26").getBundleURL("g05j8") + "product.0009d6e3.css" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("6f9225d277073d28")(require("26360e45f84f3e26").getBundleURL("g05j8") + "product.32ff8da9.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("ajSHU"));
 
-},{"7f250e71109ecf03":"61B45","4fdcfa8274853961":"lgJ39"}],"iTTHp":[function(require,module,exports) {
-module.exports = require("d8ecd85ce221d30f")(require("afda453112e2755d").getBundleURL("g05j8") + "notFound.4f16eca9.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("eTtiY"));
+},{"8bd92b5359956747":"1MWPE","26360e45f84f3e26":"lgJ39","6f9225d277073d28":"61B45"}],"f1hnr":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("b630860f6c2d84ff")(require("a7af22ec5b0d95c5").getBundleURL("g05j8") + "order.7d41ea80.css" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("362ffaee89ae163f")(require("a7af22ec5b0d95c5").getBundleURL("g05j8") + "order.16121d68.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("gi2Xn"));
 
-},{"d8ecd85ce221d30f":"61B45","afda453112e2755d":"lgJ39"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequire6110")
+},{"b630860f6c2d84ff":"1MWPE","a7af22ec5b0d95c5":"lgJ39","362ffaee89ae163f":"61B45"}],"5QcGJ":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("8c8f0cf73e2db4e2")(require("18a3cd42146b48ed").getBundleURL("g05j8") + "notFound.56fd5e51.css" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("8cf8700b1d614b91")(require("18a3cd42146b48ed").getBundleURL("g05j8") + "notFound.4f16eca9.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("eTtiY"));
+
+},{"8c8f0cf73e2db4e2":"1MWPE","18a3cd42146b48ed":"lgJ39","8cf8700b1d614b91":"61B45"}],"k3piG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Шапка
+parcelHelpers.export(exports, "getHeader", ()=>getHeader);
+var _indexJs = require("/src/js/index.js");
+var _headerCss = require("./header.css");
+function getHeader() {
+    const header = document.createElement("header");
+    header.classList.add("header");
+    const containerHeader = document.createElement("div");
+    containerHeader.classList.add("container");
+    const navHeader = document.createElement("nav");
+    navHeader.classList.add("header__nav");
+    const link1 = document.createElement("a");
+    link1.href = "/";
+    link1.classList.add("btn");
+    link1.textContent = "\u0413\u043E\u043B\u043E\u0432\u043D\u0430 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0430";
+    link1.addEventListener("click", function(event) {
+        event.preventDefault();
+        (0, _indexJs.router).navigate("/");
+    });
+    const link2 = document.createElement("a");
+    link2.href = "/catalog";
+    link2.classList.add("btn");
+    link2.textContent = "\u041A\u0430\u0442\u0430\u043B\u043E\u0433";
+    link2.addEventListener("click", function(event) {
+        event.preventDefault();
+        (0, _indexJs.router).navigate("/catalog");
+    });
+    const link3 = document.createElement("a");
+    link3.href = "/basket";
+    link3.classList.add("btn");
+    link3.textContent = "\u041A\u043E\u0440\u0437\u0438\u043D\u0430";
+    link3.addEventListener("click", function(event) {
+        event.preventDefault();
+        (0, _indexJs.router).navigate("/basket");
+    });
+    header.append(containerHeader);
+    containerHeader.append(navHeader);
+    navHeader.append(link1, link2, link3);
+    return header;
+}
+
+},{"/src/js/index.js":"ebWYT","./header.css":"39x7f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"39x7f":[function() {},{}],"eUJyY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Main тег
+parcelHelpers.export(exports, "getMain", ()=>getMain);
+var _mainCss = require("./main.css");
+function getMain() {
+    const main = document.createElement("main");
+    main.classList.add("main");
+    return main;
+}
+
+},{"./main.css":"fUGnN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fUGnN":[function() {},{}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequire6110")
 
 //# sourceMappingURL=index.739bf03c.js.map

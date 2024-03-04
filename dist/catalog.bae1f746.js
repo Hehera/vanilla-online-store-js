@@ -588,8 +588,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //Сторінка Каталога
 parcelHelpers.export(exports, "getCatalog", ()=>getCatalog);
-var _mainTitleJs = require("/src/js/components/main-title.js");
-var _mainDescJs = require("/src/js/components/main-desc.js");
+var _mainTitleJs = require("/src/js/components/mainTitle/main-title.js");
+var _mainDescJs = require("/src/js/components/mainDesc/main-desc.js");
 function getCatalog() {
     const catalogContainer = document.createElement("div");
     catalogContainer.classList.add("container");
@@ -599,10 +599,11 @@ function getCatalog() {
     return catalogContainer;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/main-title.js":"5cfjU","/src/js/components/main-desc.js":"e4pAS"}],"5cfjU":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/mainTitle/main-title.js":"gYA0B","/src/js/components/mainDesc/main-desc.js":"jyVbx"}],"gYA0B":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getTitle", ()=>getTitle);
+var _mainTitleCss = require("./mainTitle.css");
 function getTitle(text) {
     const title = document.createElement("h1");
     title.classList.add("title");
@@ -610,16 +611,17 @@ function getTitle(text) {
     return title;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e4pAS":[function(require,module,exports) {
+},{"./mainTitle.css":"8xezA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8xezA":[function() {},{}],"jyVbx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getDesc", ()=>getDesc);
+var _mainDescCss = require("./mainDesc.css");
 function getDesc(text) {
     const textDesc = document.createElement("p");
     textDesc.textContent = text;
     return textDesc;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["65cFM"], null, "parcelRequire6110")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./mainDesc.css":"cG6hU"}],"cG6hU":[function() {},{}]},["65cFM"], null, "parcelRequire6110")
 
 //# sourceMappingURL=catalog.bae1f746.js.map

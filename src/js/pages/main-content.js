@@ -1,5 +1,5 @@
-import { getTitle } from "/src/js/components/main-title.js";
-import { getMainListItem } from "/src/js/components/list-item.js";
+import { getTitle } from "/src/js/components/mainTitle/main-title.js";
+import { getMainListItem } from "/src/js/components/mainList/list-item.js";
 // Головна сторінка
 export function getMainConent() {
   const mainContainer = document.createElement("div");

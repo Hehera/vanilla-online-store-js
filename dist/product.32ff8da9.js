@@ -587,31 +587,22 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getProduct", ()=>getProduct);
-var _mainDesc = require("/src/js/components/main-desc");
-var _mainTitle = require("/src/js/components/main-title");
+var _mainDescJs = require("/src/js/components/mainDesc/main-desc.js");
+var _mainTitleJs = require("/src/js/components/mainTitle/main-title.js");
 function getProduct(title) {
     const productContainer = document.createElement("div");
     productContainer.classList.add("container");
-    const productTitle = (0, _mainTitle.getTitle)(title);
-    const productDesc = (0, _mainDesc.getDesc)("\u041D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E");
+    const productTitle = (0, _mainTitleJs.getTitle)(title);
+    const productDesc = (0, _mainDescJs.getDesc)("\u041D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E");
     productContainer.append(productTitle, productDesc);
     return productContainer;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/main-desc":"e4pAS","/src/js/components/main-title":"5cfjU"}],"e4pAS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getDesc", ()=>getDesc);
-function getDesc(text) {
-    const textDesc = document.createElement("p");
-    textDesc.textContent = text;
-    return textDesc;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cfjU":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/mainTitle/main-title.js":"gYA0B","/src/js/components/mainDesc/main-desc.js":"jyVbx"}],"gYA0B":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getTitle", ()=>getTitle);
+var _mainTitleCss = require("./mainTitle.css");
 function getTitle(text) {
     const title = document.createElement("h1");
     title.classList.add("title");
@@ -619,6 +610,17 @@ function getTitle(text) {
     return title;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7U11R"], null, "parcelRequire6110")
+},{"./mainTitle.css":"8xezA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8xezA":[function() {},{}],"jyVbx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getDesc", ()=>getDesc);
+var _mainDescCss = require("./mainDesc.css");
+function getDesc(text) {
+    const textDesc = document.createElement("p");
+    textDesc.textContent = text;
+    return textDesc;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./mainDesc.css":"cG6hU"}],"cG6hU":[function() {},{}]},["7U11R"], null, "parcelRequire6110")
 
 //# sourceMappingURL=product.32ff8da9.js.map

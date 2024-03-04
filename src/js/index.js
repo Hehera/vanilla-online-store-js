@@ -1,8 +1,8 @@
 import Navigo from 'navigo';
 export const router = new Navigo('/');
-import { getHeader } from "/src/js/components/header.js";
+import { getHeader } from "/src/js/components/header/header.js";
 
-import { getMain } from "/src/js/components/main.js";
+import { getMain } from "/src/js/components/main/main.js";
 // import { getProduct } from "./pages/product.js";
 
 const app = document.getElementById("app");

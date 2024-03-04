@@ -588,8 +588,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Головна сторінка
 parcelHelpers.export(exports, "getMainConent", ()=>getMainConent);
-var _mainTitleJs = require("/src/js/components/main-title.js");
-var _listItemJs = require("/src/js/components/list-item.js");
+var _mainTitleJs = require("/src/js/components/mainTitle/main-title.js");
+var _listItemJs = require("/src/js/components/mainList/list-item.js");
 function getMainConent() {
     const mainContainer = document.createElement("div");
     mainContainer.classList.add("container");
@@ -601,10 +601,11 @@ function getMainConent() {
     return mainContainer;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/main-title.js":"5cfjU","/src/js/components/list-item.js":"eG04z"}],"5cfjU":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/mainTitle/main-title.js":"gYA0B","/src/js/components/mainList/list-item.js":"1H7cc"}],"gYA0B":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getTitle", ()=>getTitle);
+var _mainTitleCss = require("./mainTitle.css");
 function getTitle(text) {
     const title = document.createElement("h1");
     title.classList.add("title");
@@ -612,11 +613,12 @@ function getTitle(text) {
     return title;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eG04z":[function(require,module,exports) {
+},{"./mainTitle.css":"8xezA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8xezA":[function() {},{}],"1H7cc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Вміст товару
 parcelHelpers.export(exports, "getMainListItem", ()=>getMainListItem);
+var _mainListCss = require("./mainList.css");
 var _indexJs = require("/src/js/index.js");
 function getMainListItem(title, price) {
     const itemMain = document.createElement("li");
@@ -642,6 +644,6 @@ function getMainListItem(title, price) {
     return itemMain;
 }
 
-},{"/src/js/index.js":"ebWYT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gzY4E"], null, "parcelRequire6110")
+},{"./mainList.css":"zM1mg","/src/js/index.js":"ebWYT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"zM1mg":[function() {},{}]},["gzY4E"], null, "parcelRequire6110")
 
 //# sourceMappingURL=main-content.f327517b.js.map

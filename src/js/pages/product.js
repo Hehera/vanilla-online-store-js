@@ -1,5 +1,5 @@
-import { getDesc } from "/src/js/components/main-desc"
-import { getTitle } from "/src/js/components/main-title"
+import { getDesc } from "/src/js/components/mainDesc/main-desc.js";
+import { getTitle } from "/src/js/components/mainTitle/main-title.js";
 
 export function getProduct(title) {
   const productContainer = document.createElement("div");

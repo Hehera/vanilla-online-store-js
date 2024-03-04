@@ -588,7 +588,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //Сторінка Каталога
 parcelHelpers.export(exports, "getOrder", ()=>getOrder);
-var _mainTitleJs = require("/src/js/components/main-title.js");
+var _mainTitleJs = require("/src/js/components/mainTitle/main-title.js");
 function getOrder() {
     const orderContainer = document.createElement("div");
     orderContainer.classList.add("container");
@@ -597,10 +597,11 @@ function getOrder() {
     return orderContainer;
 }
 
-},{"/src/js/components/main-title.js":"5cfjU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cfjU":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/mainTitle/main-title.js":"gYA0B"}],"gYA0B":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getTitle", ()=>getTitle);
+var _mainTitleCss = require("./mainTitle.css");
 function getTitle(text) {
     const title = document.createElement("h1");
     title.classList.add("title");
@@ -608,6 +609,6 @@ function getTitle(text) {
     return title;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["diqfz"], null, "parcelRequire6110")
+},{"./mainTitle.css":"8xezA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8xezA":[function() {},{}]},["diqfz"], null, "parcelRequire6110")
 
 //# sourceMappingURL=order.16121d68.js.map
