@@ -1,0 +1,50 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+a {
+  text-decoration: none;
+  color:#fff;
+}
+.list-reset {
+  list-style: none;
+}
+.container {
+  max-width: 1270px;
+  padding: 10px;
+  background-color: rgb(49, 79, 105);
+}
+/* -------------- */
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+/* -------------- */
+.btn {
+  padding: 5px;
+  background-color: rgb(70, 70, 43);
+  outline: 2px solid transparent;
+}
+
+.btn:hover {
+  background-color: rgb(138, 138, 35);
+}
+
+.btn:active {
+  background-color: rgb(138, 138, 35);
+}
+
+.btn:focus{
+  outline-color: rgb(138, 138, 35);
+}
+/* -------------- */
+
+.wrapper__list {
+  display: flex;
+  gap: 30px;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+}

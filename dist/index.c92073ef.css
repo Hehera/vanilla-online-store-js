@@ -1,0 +1,49 @@
+body {
+  font-family: Courier New, Courier, monospace;
+  font-size: 25px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.container {
+  background-color: #314f69;
+  max-width: 1270px;
+  padding: 10px;
+}
+
+.header__nav {
+  gap: 30px;
+  display: flex;
+}
+
+.btn {
+  background-color: #46462b;
+  outline: 2px solid #0000;
+  padding: 5px;
+}
+
+.btn:hover, .btn:active {
+  background-color: #8a8a23;
+}
+
+.btn:focus {
+  outline-color: #8a8a23;
+}
+
+.wrapper__list {
+  gap: 30px;
+  display: flex;
+}
+
+.list__item {
+  flex-direction: column;
+  display: flex;
+}
+/*# sourceMappingURL=index.c92073ef.css.map */
