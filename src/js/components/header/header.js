@@ -1,5 +1,7 @@
-import { router } from "/src/js/index.js";
 import "./header.css";
+import { router } from "/src/js/index.js";
+import { getNavigationLink } from "/src/js/components/NavigationLink/navigationLink.js";
+
 // Шапка
 export function getHeader() {
   const header = document.createElement("header");
@@ -11,36 +13,12 @@ export function getHeader() {
   const navHeader = document.createElement("nav");
   navHeader.classList.add("header__nav");
 
-  const link1 = document.createElement("a");
-  link1.href = "/";
-  link1.classList.add("btn");
-  link1.textContent = "Головна сторінка";
+  let link1 = getNavigationLink("/", "Головна сторінка");
 
-  link1.addEventListener("click", function (event) {
-    event.preventDefault();
-    router.navigate('/');
-  });
+  let link2 = getNavigationLink("/catalog", "Каталог");
 
-  const link2 = document.createElement("a");
-  link2.href = "/catalog";
-  link2.classList.add("btn");
-  link2.textContent = "Каталог";
-
-  link2.addEventListener("click", function (event) {
-    event.preventDefault();
-    router.navigate('/catalog')
-  });
-
-  const link3 = document.createElement("a");
-  link3.href = "/basket";
-  link3.classList.add("btn");
-  link3.textContent = "Корзина";
-
+  let link3 = getNavigationLink("/basket", "Корзина");
   
-  link3.addEventListener("click", function (event) {
-    event.preventDefault();
-    router.navigate('/basket');
-  });
 
   header.append(containerHeader);
   containerHeader.append(navHeader);
