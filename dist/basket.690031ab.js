@@ -588,6 +588,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //торінка Корзини
 parcelHelpers.export(exports, "getBasket", ()=>getBasket);
+var _indexJs = require("/src/js/index.js");
 var _mainTitleJs = require("/src/js/components/main-title.js");
 var _mainDescJs = require("/src/js/components/main-desc.js");
 function getBasket() {
@@ -595,11 +596,20 @@ function getBasket() {
     basketContainer.classList.add("container");
     const basketTitle = (0, _mainTitleJs.getTitle)("\u041A\u043E\u0440\u0437\u0438\u043D\u0430");
     const basketDesc = (0, _mainDescJs.getDesc)("\u041D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430");
-    basketContainer.append(basketTitle, basketDesc);
+    // Кнопка оформлення
+    const orderLink = document.createElement("a");
+    orderLink.href = "";
+    orderLink.classList.add("btn");
+    orderLink.textContent = "\u041E\u0444\u043E\u0440\u043C\u0438\u0442\u0438 \u0437\u0430\u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F";
+    orderLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        (0, _indexJs.router).navigate("/order");
+    });
+    basketContainer.append(basketTitle, basketDesc, orderLink);
     return basketContainer;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/main-title.js":"5cfjU","/src/js/components/main-desc.js":"e4pAS"}],"5cfjU":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","/src/js/components/main-title.js":"5cfjU","/src/js/components/main-desc.js":"e4pAS","/src/js/index.js":"ebWYT"}],"5cfjU":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getTitle", ()=>getTitle);

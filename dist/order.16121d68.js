@@ -589,17 +589,15 @@ parcelHelpers.defineInteropFlag(exports);
 //Сторінка Каталога
 parcelHelpers.export(exports, "getOrder", ()=>getOrder);
 var _mainTitleJs = require("/src/js/components/main-title.js");
-var _mainDescJs = require("/src/js/components/main-desc.js");
 function getOrder() {
-    const catalogContainer = document.createElement("div");
-    catalogContainer.classList.add("container");
-    const catalogTitle = (0, _mainTitleJs.getTitle)("\u041E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u043D\u044F");
-    const catalogDesc = (0, _mainDescJs.getDesc)("\u0422\u0443\u0442 \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u043D\u044F \u0437\u0430\u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F");
-    catalogContainer.append(catalogTitle, catalogDesc);
-    return catalogContainer;
+    const orderContainer = document.createElement("div");
+    orderContainer.classList.add("container");
+    const orderTitle = (0, _mainTitleJs.getTitle)("\u041E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u043D\u044F");
+    orderContainer.append(orderTitle);
+    return orderContainer;
 }
 
-},{"/src/js/components/main-title.js":"5cfjU","/src/js/components/main-desc.js":"e4pAS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cfjU":[function(require,module,exports) {
+},{"/src/js/components/main-title.js":"5cfjU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cfjU":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getTitle", ()=>getTitle);
@@ -608,16 +606,6 @@ function getTitle(text) {
     title.classList.add("title");
     title.textContent = text;
     return title;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e4pAS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getDesc", ()=>getDesc);
-function getDesc(text) {
-    const textDesc = document.createElement("p");
-    textDesc.textContent = text;
-    return textDesc;
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["diqfz"], null, "parcelRequire6110")

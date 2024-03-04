@@ -617,10 +617,19 @@ router.on("/basket", async ()=>{
     main.append(basket);
 });
 router.on("/order", async ()=>{
+    router.navigate("/");
+    return;
     main.innerHTML = "";
     const pageModuleOrder = await require("9d59a38700be7d49");
     const order = pageModuleOrder.getOrder();
     main.append(order);
+});
+// Сторінку не знайдено
+router.notFound(async ()=>{
+    main.innerHTML = "";
+    const pageModuleNotFound = await require("a1a90b0c98d92140");
+    const orderNotFound = pageModuleNotFound.getNotFoundPage();
+    main.append(orderNotFound);
 });
 router.on("/product/:title", async ({ data })=>{
     console.log(data.title);
@@ -634,7 +643,7 @@ app.append(main);
 // app.append(product)
 router.resolve();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","navigo":"fuSlc","/src/js/components/header.js":"iODzc","/src/js/components/main.js":"6zk94","b6271642c7f5e36":"c48Hx","4f5087fc1c250b41":"6hLcw","8dff49ecdecdca4b":"7VF80","6d799db7b5011a41":"jAK9K","9d59a38700be7d49":"csMpT"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","navigo":"fuSlc","/src/js/components/header.js":"iODzc","/src/js/components/main.js":"6zk94","b6271642c7f5e36":"c48Hx","4f5087fc1c250b41":"6hLcw","8dff49ecdecdca4b":"7VF80","6d799db7b5011a41":"jAK9K","9d59a38700be7d49":"csMpT","a1a90b0c98d92140":"iTTHp"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -1197,7 +1206,7 @@ function getHeader() {
     const navHeader = document.createElement("nav");
     navHeader.classList.add("header__nav");
     const link1 = document.createElement("a");
-    link1.href = "";
+    link1.href = "/";
     link1.classList.add("btn");
     link1.textContent = "\u0413\u043E\u043B\u043E\u0432\u043D\u0430 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0430";
     link1.addEventListener("click", function(event) {
@@ -1205,7 +1214,7 @@ function getHeader() {
         (0, _indexJs.router).navigate("/");
     });
     const link2 = document.createElement("a");
-    link2.href = "";
+    link2.href = "/catalog";
     link2.classList.add("btn");
     link2.textContent = "\u041A\u0430\u0442\u0430\u043B\u043E\u0433";
     link2.addEventListener("click", function(event) {
@@ -1213,7 +1222,7 @@ function getHeader() {
         (0, _indexJs.router).navigate("/catalog");
     });
     const link3 = document.createElement("a");
-    link3.href = "";
+    link3.href = "/basket";
     link3.classList.add("btn");
     link3.textContent = "\u041A\u043E\u0440\u0437\u0438\u043D\u0430";
     link3.addEventListener("click", function(event) {
@@ -1364,6 +1373,12 @@ module.exports = require("7f250e71109ecf03")(require("4fdcfa8274853961").getBund
     throw err;
 }).then(()=>module.bundle.root("gi2Xn"));
 
-},{"7f250e71109ecf03":"61B45","4fdcfa8274853961":"lgJ39"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequire6110")
+},{"7f250e71109ecf03":"61B45","4fdcfa8274853961":"lgJ39"}],"iTTHp":[function(require,module,exports) {
+module.exports = require("d8ecd85ce221d30f")(require("afda453112e2755d").getBundleURL("g05j8") + "notFound.4f16eca9.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("eTtiY"));
+
+},{"d8ecd85ce221d30f":"61B45","afda453112e2755d":"lgJ39"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequire6110")
 
 //# sourceMappingURL=index.739bf03c.js.map

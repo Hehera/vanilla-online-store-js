@@ -33,12 +33,22 @@ router.on("/basket", async () => {
 });
 
 router.on("/order", async () => {
+  if(true) {
+    router.navigate('/')
+    return
+  }
   main.innerHTML = "";
   const pageModuleOrder= await import("/src/js/pages/order.js");
   const order = pageModuleOrder.getOrder();
   main.append(order);
 });
-
+// Сторінку не знайдено
+router.notFound(async () => {
+  main.innerHTML = "";
+  const pageModuleNotFound = await import("/src/js/pages/notFound.js");
+  const orderNotFound = pageModuleNotFound.getNotFoundPage();
+  main.append(orderNotFound);
+});
 
 router.on("/product/:title", async ({ data }) => {
   console.log(data.title);
@@ -50,9 +60,7 @@ router.on("/product/:title", async ({ data }) => {
 app.append(header);
 app.append(main);
 
-
 // app.append(product)
-
 
 router.resolve();
 

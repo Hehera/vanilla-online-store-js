@@ -1,3 +1,4 @@
+import { router } from "/src/js/index.js";
 import { getTitle } from "/src/js/components/main-title.js";
 import { getDesc } from "/src/js/components/main-desc.js";
 //торінка Корзини
@@ -6,6 +7,20 @@ export function getBasket() {
   basketContainer.classList.add("container");
   const basketTitle = getTitle("Корзина");
   const basketDesc = getDesc("Недоступна");
-  basketContainer.append(basketTitle, basketDesc);
+
+
+  // Кнопка оформлення
+  const orderLink = document.createElement("a");
+  orderLink.href = "";
+  orderLink.classList.add("btn");
+  orderLink.textContent = "Оформити замовлення";
+
+  orderLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    router.navigate('/order');
+  });
+
+
+  basketContainer.append(basketTitle, basketDesc,orderLink);
   return basketContainer;
 }
